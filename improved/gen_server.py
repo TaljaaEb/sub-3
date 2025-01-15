@@ -6,7 +6,7 @@ import queue
 
 # Server class
 class Server:
-    def __init__(self, host='localhost', port=12345):
+    def __init__(self, host='0.0.0.0', port=443):
         self.host = host
         self.port = port
         self.clients = {}  # Mapping of clients and their RSA public keys
@@ -57,6 +57,7 @@ class Server:
 
             except Exception as e:
                 print(f"Error with client {client_id}: {e}")
+#                print(encrypted_message)
                 break
 
         print(f"Client {client_id} disconnected.")
