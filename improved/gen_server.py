@@ -6,7 +6,7 @@ import queue
 
 # Server class
 class Server:
-    def __init__(self, host='0.0.0.0', port=443):
+    def __init__(self, host='0.0.0.0', port=8443):
         self.host = host
         self.port = port
         self.clients = {}  # Mapping of clients and their RSA public keys
